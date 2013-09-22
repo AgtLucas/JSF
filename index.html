@@ -28,7 +28,7 @@
       <li class="next">JSF 1.0 (11/03/2004) Especificação inicial</li>
       <li class="next">JSF 1.1 (27/05/2004) Correções de bugs</li>
       <li class="next">JSF 1.2 (11/05/2006) Adoção inicial pela JEE</li>
-      <li class="next">JSF 2.0 (28/06/2009) Tornou-se padrão</li>
+      <li class="next">JSF 2.0 (28/06/2009) Tornou-se padrão, Ajax</li>
       <li class="next">JSF 2.1 (22/10/2010) Correções de bugs</li>
       <li class="next">JSF 2.2 (16/04/2013) Views Stateless</li>
     </ul>
@@ -42,24 +42,30 @@
   </div></section>
   <section class="slide"><div>
     <h2>Facelets</h2>
-    <p>É um sistema de template Web open source. Suporta todos os componentes do JSF e se concentra totalemnte na construção da árvore de componentes JSF, refletindo a view para uma aplicação JSF.</p>
+    <p>Criado por Jacob Hookom em 2005, é um sistema de template Web open source. Suporta todos os componentes do JSF e se concentra totalemnte na construção da árvore de componentes JSF, refletindo a view para uma aplicação JSF.</p>
     <p>Baseado no padrão de projeto Composite, ou seja, seções de uma página ou mesmo as próprias páginas podem ser reutilizadas por outras páginas.</p>
   </div></section>
   <section class="slide"><div>
-    <h2>Arquitetura e Tecnologias</h2>
-    <img class="seam-arc" src="" alt="JSF...">
-  </div></section>
-  <section class="slide"><div>
-    <h2>JSF</h2>
-    <p></p>
-  </div></section>
-  <section class="slide"><div>
     <h2>Facelets</h2>
-    <p></p>
+    <p>Um Facelet pode ser definido como uma seção reutilizável de conteúdo ou uma sub-árvore de componentes em uma página JSF que pode ser por si mesma composta de outros Facelets. Neste sentido, um Facelet é um elemento de uma view composta que pode ser facilmente combinado com outros Facelets para construir uma view JSF que será apresentada ao usuário.</p>
   </div></section>
   <section class="slide"><div>
-    <h2>EJB</h2>
-    <p></p>
+    <h2>Como o JSF funciona?</h2>
+    <ul>
+      <li class="next">JSF é baseado em um modelo de UI baseado em componentes, usando arquivos XML chamados de views ou Facelets views.</li>
+      <li class="next">Os pedidos são processados pelo FacesServlet, que carrega o modelo da view adequado e constrói a ávorede de componentes, processa os eventos e apresenta a resposta para o cliente.</li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Como o JSF funciona?</h2>
+    <ul>
+      <li class="next">O estado de componentes de UI e outros objetos de interesse de escopo, são salvos no final de cada pedido em um processo chamado <strong>stateSaving</strong> e restaurado na próxima criação dessa view.</li>
+      <li class="next">Objetos e estados podem ser salvos tanto no lado do servidor, quanto no lado do cliente</li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Ciclo de vida</h2>
+    <img class="seam-arc" src="pictures/cvjsf.png">
   </div></section>
     <section class="slide"><div>
       <h2>Exemplos - Código</h2>
