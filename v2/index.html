@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>JSF</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -68,57 +68,74 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
+						<h2>Histórico e versões</h2>
+					</section>
+					<section>
+						<p class="fragment grow highlight-blue">JSF 1.0 (11/03/2004) Especificação inicial</p>
+						<p class="fragment grow highlight-red">JSF 1.1 (27/05/2004) Correções de bugs</p>
+						<p class="fragment grow highlight-blue">JSF 1.2 (11/05/2006) Adoção inicial pela JEE</p>
+						<p class="fragment grow highlight-red">JSF 2.0 (28/06/2009) Tornou-se padrão, Ajax</p>
+						<p class="fragment grow highlight-blue">JSF 2.1 (22/10/2010) Correções de bugs</p>
+						<p class="fragment grow highlight-red">JSF 2.2 (16/04/2013) Views Stateless</p>
+					</section>
+					<section>
+						<p>JSF 1.X usava JSP como sistema de template padrão.</p>
+					</section>
+					<section>
+						<p class="fragment grow">A partir da versão 2.X, o sistema de template padrão passou a ser o Facelets.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Facelets</h2>
 						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
+							Criado por Jacob Hookom em 2005, é um sistema de template Web open source. Suporta todos os componentes do JSF e se concentra totalemnte na construção da árvore de componentes JSF, refletindo a view para uma aplicação JSF.
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
 					</section>
+
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<p>
+							Baseado no padrão de projeto Composite, ou seja, seções de uma página ou mesmo as próprias páginas podem ser reutilizadas por outras páginas.
+						</p>
 					</section>
+
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<p>
+							Um Facelet pode ser definido como uma seção reutilizável de conteúdo ou uma sub-árvore de componentes em uma página JSF que pode ser por si mesma composta de outros Facelets. Neste sentido, um Facelet é um elemento de uma view composta que pode ser facilmente combinado com outros Facelets para construir uma view JSF que será apresentada ao usuário.
+						</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+					<section>
+						<h2>Como o JSF funciona?</h2>
+						<p class="fragment shrink">
+							JSF é baseado em um modelo de UI baseado em componentes, usando arquivos XML chamados de views ou Facelets views.
+						</p>
+					</section>
+					<section>
+						<p class="fragment grow">
+							Os pedidos são processados pelo FacesServlet, que carrega o modelo da view adequado e constrói a ávorede de componentes, processa os eventos e apresenta a resposta para o cliente.
+						</p>
+					</section>
+
+					<section>
+						<p class="fragment grow">
+							O estado de componentes de UI e outros objetos de interesse de escopo, são salvos no final de cada pedido em um processo chamado <strong class="fragment highlight-blue">stateSaving</strong> e restaurado na próxima criação dessa view.
+						</p>
+					</section>
+
+					<section>
+						<p class="fragment shrink">
+							Objetos e estados podem ser salvos tanto no lado do servidor, quanto no lado do cliente.
+						</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
+					<h2>Ciclo de vida</h2>
+					<img class="fragment" src="../pictures/cvjsf.png">
 				</section>
 
 				<section>
